@@ -26,6 +26,7 @@ class SunmiPrinter {
   static const String PRINT_TEXT = "printText";
   static const String PRINT_ROW = "printRow";
   static const String PRINT_IMAGE = "printImage";
+  static const String IS_SUNMI_DEVICE = "isSunmiDevice";
 
   static const MethodChannel _channel =
       const MethodChannel('flutter_sunmi_printer');
@@ -120,6 +121,10 @@ class SunmiPrinter {
 
   static Future<void> underlineOff() async {
     await _channel.invokeMethod(UNDERLINE_OFF);
+  }
+
+  static Future<bool> isSunmiDevice() async {
+    return await _channel.invokeMethod(IS_SUNMI_DEVICE);
   }
 
   static Future<void> image(
