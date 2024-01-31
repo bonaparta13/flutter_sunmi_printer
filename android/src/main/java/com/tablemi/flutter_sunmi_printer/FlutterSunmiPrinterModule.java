@@ -144,4 +144,20 @@ public class FlutterSunmiPrinterModule {
     AidlUtil.getInstance().printBitmap(BitmapUtil.convertToThumb(bytes, 280), align);
     // AidlUtil.getInstance().lineWrap(1);
   }
+
+  public Boolean isSunmiDevice() {
+
+    // AidlUtil.getInstance().lineWrap(1);
+    final String serial = "";
+    try {
+      serial = AidlUtil.getInstance().getPrinterSerialNo();
+
+    } catch (RemoteException e) {
+      serial = "";
+      // return ""; // error;
+    } catch (NullPointerException e) {
+      serial = "";
+    }
+    return serial != "";
+  }
 }
