@@ -148,7 +148,7 @@ public class FlutterSunmiPrinterModule {
   public Boolean isSunmiDevice() {
 
     // AidlUtil.getInstance().lineWrap(1);
-    final String serial = "";
+    String serial = "";
     try {
       serial = AidlUtil.getInstance().getPrinterSerialNo();
 
