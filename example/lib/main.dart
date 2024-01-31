@@ -65,6 +65,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    SunmiPrinter.isSunmiDevice().then((value) {
+      print('isSunmiDevice=$value');
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(

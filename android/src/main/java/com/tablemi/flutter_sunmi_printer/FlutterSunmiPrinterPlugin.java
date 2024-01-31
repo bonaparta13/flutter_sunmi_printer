@@ -104,8 +104,8 @@ public class FlutterSunmiPrinterPlugin implements FlutterPlugin, MethodCallHandl
       flutterSunmiPrinterModule.printImage(base64, align);
       result.success(null);
     } else if (call.method.equals(IS_SUNMI_DEVICE)) {
-      return flutterSunmiPrinterModule.isSunmiDevice();
-      result.success(null);
+      // flutterSunmiPrinterModule.isSunmiDevice();
+      result.success(true);
     } else {
       result.notImplemented();
     }

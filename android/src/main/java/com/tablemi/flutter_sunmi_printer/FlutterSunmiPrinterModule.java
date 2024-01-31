@@ -145,19 +145,19 @@ public class FlutterSunmiPrinterModule {
     // AidlUtil.getInstance().lineWrap(1);
   }
 
-  public Boolean isSunmiDevice() {
+  // public Boolean isSunmiDevice() {
 
-    // AidlUtil.getInstance().lineWrap(1);
-    String serial = "";
-    try {
-      serial = AidlUtil.getInstance().getPrinterSerialNo();
+  // // AidlUtil.getInstance().lineWrap(1);
+  // String serial = "";
+  // try {
+  // serial = AidlUtil.getInstance().getPrinterSerialNo();
 
-    } catch (RemoteException e) {
-      serial = "";
-      // return ""; // error;
-    } catch (NullPointerException e) {
-      serial = "";
-    }
-    return serial != "";
-  }
+  // } catch (RemoteException e) {
+  // serial = "";
+  // // return ""; // error;
+  // } catch (NullPointerException e) {
+  // serial = "";
+  // }
+  // return serial != "";
+  // }
 }
