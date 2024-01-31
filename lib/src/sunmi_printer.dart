@@ -84,10 +84,10 @@ class SunmiPrinter {
   /// Total width of columns in one row must be equal to 12.
   static Future<void> row({
     required List<SunmiCol> cols,
-    bool bold: false,
-    bool underline: false,
-    SunmiSize textSize: SunmiSize.md,
-    int linesAfter: 0,
+    bool bold = false,
+    bool underline = false,
+    SunmiSize textSize = SunmiSize.md,
+    int linesAfter = 0,
   }) async {
     final isSumValid = cols.fold(0, (int sum, col) => sum + col.width) == 12;
     if (!isSumValid) {
@@ -124,7 +124,7 @@ class SunmiPrinter {
 
   static Future<void> image(
     String base64, {
-    SunmiAlign align: SunmiAlign.center,
+    SunmiAlign align = SunmiAlign.center,
   }) async {
     await _channel.invokeMethod(PRINT_IMAGE, {
       "base64": base64,
